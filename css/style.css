@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header_top_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.header_top_block img {
+    margin-right: 100px;
+    width: 130px;
+    height: 150px;
+}
+
+.header_top_block h1 {
+    color: #0088A2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+
+
+
+}
+
+.menu_without_burger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toggle {
+    opacity: 0;
+}
+
+/* Создание кнопки стилизация кнопки */
+
+.btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Создание бургера */
+.btn span {
+    width: 80%;
+    left: 10%;
+}
+
+.btn span::before,
+.btn span::after {
+    width: 100%;
+    left: 0%;
+}
+
+
+.btn span,
+.btn span::before,
+.btn span::after {
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: #0088A2;
+    transition: 0.5s;
+}
+
+.btn span::before {
+    content: '';
+    top: -8px;
+}
+
+.btn span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu {
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    padding: 80px 10px;
+    list-style: none;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 1px 0px 10px 3px rgba(0, 0, 0, 0.543);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+li {
+    list-style: none;
+}
+
+.menu_item {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-se;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #808080;
+    transition: 0.5s;
+    width: 378px;
+    text-align: center;
+    position: relative;
+}
+
+.menu_item::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 8px;
+    height: 1px;
+    background-color: #0088A2;
+}
+
+.menu_item:hover {
+    background-color: #0088A2;
+    color: #fff;
+}
+
+#toggle:checked~.btn span {
+    transform: rotate(45deg);
+
+}
+
+#toggle:checked~.btn span::before {
+    transform: rotate(0deg);
+    top: 0;
+}
+
+#toggle:checked~.btn span::after {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+#toggle:checked~.menu {
+    visibility: visible;
+    left: 0;
+}
+
+
+
+.quest_section {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.quest_card {
+    flex: 0 1 30%;
+    position: relative;
+    transition: 0.4s;
+
+}
+
+.quest_card img {
+    width: 100%;
+}
+
+.quest_card p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 32.68px;
+    position: absolute;
+    top: 37%;
+    text-align: center;
+    left: 10%;
+    width: 80%;
+
+
+}
+
+.quest_card:hover {
+    transform: scale(1.15);
+
+}
+
+
+
+
+.about_section h2 {
+    margin: 90px auto;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #0088A2;
+
+}
+
+.about_section {
+    width: 100%;
+    margin: 50px 0;
+
+}
+
+.about_card {
+    margin: 0 80px;
+    display: flex;
+    position: relative;
+}
+
+
+.video {
+    width: 100%;
+}
+
+.play_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+
+}
+
+.mobil_section {
+    width: 90%;
+    height: 100vh;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.question {
+    width: 25%;
+    position: absolute;
+    top: 0;
+}
+
+.question:nth-child(1) {
+    left: 0;
+}
+
+.question:nth-child(2) {
+    top: 40px;
+    left: 18%;
+}
+
+.question:nth-child(3) {
+    left: 36%;
+}
+
+.question:nth-child(4) {
+    top: 40px;
+    left: 54%;
+}
+
+.question:nth-child(5) {
+    left: 72%;
+}
+
+.about_project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about_project h2 {
+    text-align: center;
+    color: #0088A2;
+    font-size: 46px;
+    font-weight: 400;
+    margin: 60px auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.about_project p {
+    color: #707070;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: normal;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 80px;
+    width: 50%;
+}
+
+.down_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 70px auto;
+}
+
+.down_card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.down_card img {
+    width: 15%;
+}
+
+.down_section h2 {
+    text-align: center;
+    color: #0088A2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+
+
+
+}
+
+.down_section p {
+    color: #707070;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 53%;
+}
+
+footer {
+    background-color: #0088A2;
+    padding-bottom: 150px;
+}
+
+.footerr_section {
+    width: 100%;
+    height: 420px;
+    text-align: center;
+    padding-bottom: 70px;
+
+
+}
+
+.footerr_section h2 {
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+    padding: 80px 0;
+
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_icons img {
+    width: 55px;
+    height: 55px;
+    margin: 0px 50px;
+    position: relative;
+    left: 10px;
+}
+
+.about_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px auto;
+
+}
+
+.footer_col h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer_col li {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer_col a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
